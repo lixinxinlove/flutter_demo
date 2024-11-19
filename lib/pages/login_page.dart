@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controller/config_controller.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -9,6 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  ConfigController configController = Get.find<ConfigController>();
 
   @override
   void initState() {
@@ -26,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         children: [
           Center(
-            child: Text("Login"),
+            child: Text("Login${configController.appVersion}"),
           )
         ],
       ),

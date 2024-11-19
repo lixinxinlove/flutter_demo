@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/pages/controller/address_controller.dart';
+
 import 'package:get/get.dart';
+
+import '../controller/address_controller.dart';
 
 class AddressPage extends GetView<AddressController> {
   const AddressPage({super.key});

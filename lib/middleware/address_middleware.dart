@@ -7,7 +7,7 @@ class AddressMiddleware extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     //判断
     print(route);
-    return null;
+    //return null;
     return const RouteSettings(name: "/login",arguments: {
       "userName":"lixinxin",
       "password":"8888888"
