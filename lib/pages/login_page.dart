@@ -21,6 +21,7 @@ class _LoginPageState extends State<LoginPage> {
     final arg = Get.arguments;
     print(arg['userName']);
     print(arg['password']);
+
   }
 
   @override
