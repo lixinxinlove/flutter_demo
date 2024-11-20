@@ -1,0 +1,98 @@
+PODS:
+  - advertising_id (0.0.1):
+    - Flutter
+  - connectivity_plus (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - dd_check_plugin (0.0.1):
+    - Flutter
+  - device_info_plus (0.0.1):
+    - Flutter
+  - fk_user_agent (2.0.0):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_secure_storage (6.0.0):
+    - Flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - locale_plus (1.0.1):
+    - Flutter
+  - network_info_plus (0.0.1):
+    - Flutter
+  - package_info_plus (0.4.5):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - Toast (4.1.1)
+
+DEPENDENCIES:
+  - advertising_id (from `.symlinks/plugins/advertising_id/ios`)
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/darwin`)
+  - dd_check_plugin (from `.symlinks/plugins/dd_check_plugin/ios`)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
+  - fk_user_agent (from `.symlinks/plugins/fk_user_agent/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - locale_plus (from `.symlinks/plugins/locale_plus/ios`)
+  - network_info_plus (from `.symlinks/plugins/network_info_plus/ios`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - Toast
+
+EXTERNAL SOURCES:
+  advertising_id:
+    :path: ".symlinks/plugins/advertising_id/ios"
+  connectivity_plus:
+    :path: ".symlinks/plugins/connectivity_plus/darwin"
+  dd_check_plugin:
+    :path: ".symlinks/plugins/dd_check_plugin/ios"
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
+  fk_user_agent:
+    :path: ".symlinks/plugins/fk_user_agent/ios"
+  Flutter:
+    :path: Flutter
+  flutter_secure_storage:
+    :path: ".symlinks/plugins/flutter_secure_storage/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  locale_plus:
+    :path: ".symlinks/plugins/locale_plus/ios"
+  network_info_plus:
+    :path: ".symlinks/plugins/network_info_plus/ios"
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+
+SPEC CHECKSUMS:
+  advertising_id: ea8a9b898196a0673bad1b0fe6c50541d9295d02
+  connectivity_plus: 4c41c08fc6d7c91f63bc7aec70ffe3730b04f563
+  dd_check_plugin: fadd604fdabcd4c8674046cbda00aeda61646a03
+  device_info_plus: bf2e3232933866d73fe290f2942f2156cdd10342
+  fk_user_agent: 1f47ec39291e8372b1d692b50084b0d54103c545
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
+  fluttertoast: e9a18c7be5413da53898f660530c56f35edfba9c
+  locale_plus: 89c741a60ee3bad68ddbb86c172ed45db98a5ae3
+  network_info_plus: 6613d9d7cdeb0e6f366ed4dbe4b3c51c52d567a9
+  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.15.2

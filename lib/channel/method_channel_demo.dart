@@ -14,12 +14,15 @@ class MethodChannelDemo {
     final Map<String, dynamic> map = {"name": "haha"};
 
     ///2.接受信息
-    String version = await _channel.invokeMethod("getAppVersion", map);
+    String version = await _channel.invokeMethod("appInstallTime", map);
     print(version);
 
     ///
-    _channel.setMethodCallHandler((v) async {
-      String funv = v.method;
+    _channel.setMethodCallHandler((method) async {
+      print("*****************MethodCallHandler*******************");
+      print(method.method);
+      print(method.arguments);
+      if (method.method == "getFlutterVersion") {}
     });
   }
 }
