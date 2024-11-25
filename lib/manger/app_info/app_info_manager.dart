@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:android_id/android_id.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:fk_user_agent/fk_user_agent.dart';
+import 'package:get/get.dart';
 
 import 'package:locale_plus/locale_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -31,10 +32,13 @@ class AppInfoManager {
   /// app启动是先初始化APP基本信息
   Future<void> init() async {
     DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
-    await FkUserAgent.init();
-    String? webViewUserAgent = FkUserAgent.webViewUserAgent;
-    if (webViewUserAgent != null) {
-      info.ua = webViewUserAgent;
+
+    if (GetPlatform.isMobile) {
+      await FkUserAgent.init();
+      String? webViewUserAgent = FkUserAgent.webViewUserAgent;
+      if (webViewUserAgent != null) {
+        info.ua = webViewUserAgent;
+      }
     }
 
     if (Platform.isAndroid) {
@@ -47,7 +51,6 @@ class AppInfoManager {
 
       AndroidDeviceInfo androidDeviceInfo = await deviceInfoPlugin.androidInfo;
 
-
       print("**************AndroidDeviceInfo*****************");
       print(androidDeviceInfo.data);
 
@@ -59,14 +62,12 @@ class AppInfoManager {
 
       PackageInfo packageInfo = await PackageInfo.fromPlatform();
 
-
       print("**************AAndroidPackageInfo*****************");
       print(packageInfo.data);
 
       ///sdkInt: 34, release: 14,
 
-
-    final regionCode = await LocalePlus().getRegionCode();
+      final regionCode = await LocalePlus().getRegionCode();
       final languageCode = await LocalePlus().getLanguageCode();
 
       ///包名

@@ -60,7 +60,10 @@ dependencies:
   #保存数据
   flutter_secure_storage: ^9.2.2
   locale_plus: ^1.6.0+1
-
+  #键盘
+  flutter_keyboard_visibility: ^6.0.0
+  #wolt_modal_sheet
+  wolt_modal_sheet: ^0.9.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/router/routers.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
@@ -14,15 +15,21 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   //await XCache.preInit();
-  await AppInfoManager().init();
+
+  if (GetPlatform.isMobile) {
+    await AppInfoManager().init();
+  }
+
 //  await MethodChannelManager().init();
   //await UserManager.init();
 
   Future.delayed(Duration.zero, () {
-    ///三种通信方式
-    BasicMessageChannelDemo().initBasicMessageChannel();
-    EventChannelDemo().initEventChannel();
-    MethodChannelDemo().initMethodChannel();
+    if (GetPlatform.isMobile) {
+      ///三种通信方式
+      BasicMessageChannelDemo().initBasicMessageChannel();
+      EventChannelDemo().initEventChannel();
+      MethodChannelDemo().initMethodChannel();
+    }
   });
 
   runApp(const MyApp());

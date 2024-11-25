@@ -24,6 +24,11 @@ class _RootPageState extends State<RootPage> {
                     Get.toNamed('/address');
                   },
                   child: Text("跳转到地址页面")),
+              TextButton(
+                  onPressed: () {
+                    Get.toNamed('/keyboard');
+                  },
+                  child: Text("keyboard")),
             ],
           ),
           const Center(
