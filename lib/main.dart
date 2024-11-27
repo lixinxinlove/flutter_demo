@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/router/routers.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
+
 
 import 'binding/binding.dart';
 import 'channel/basic_message_channel_demo.dart';
 import 'channel/event_channel_demo.dart';
 import 'channel/method_channel_demo.dart';
+import 'db/database.dart';
+import 'db/tables.dart';
 import 'manger/app_info/app_info_manager.dart';
-import 'manger/channel/method_channel_manager.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   //await XCache.preInit();
+
+
+
+  final database = AppDatabase();
+
+  await database.into(database.todoItem).insert(TodoItemCompanion.insert(
+    title: 'todo: finish drift setup',
+    content: 'We can now write queries and define our own tables.',
+  ));
+  List<TodoItemData> allItems = await database.select(database.todoItem).get();
+
+  print('items in database: $allItems');
+
 
   if (GetPlatform.isMobile) {
     await AppInfoManager().init();
